@@ -1,3 +1,3 @@
-# Hello World in Python
+# Hello Python! in Python
 
-print("Hello World")
+print("Hello Python!")
