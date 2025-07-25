@@ -1,4 +1,4 @@
-# NumPy Logs in Python
+# ufunc Logs in Python
 
 from math import log
 import numpy as np
