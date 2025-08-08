@@ -27,10 +27,10 @@ def main(request):
 
 
 def testing(request):
-    mymembers = Member.objects.all().values()
+    mydata = Member.objects.all()
     template = loader.get_template("template.html")
     context = {
-        "mymembers": mymembers,
+        "mymembers": mydata,
         "firstname": "Linus",
         "fruits": ["Apple", "Banana", "Cherry"],
         "x": ["Apple", "Banana", "Cherry"],
