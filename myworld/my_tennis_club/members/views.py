@@ -30,6 +30,8 @@ def testing(request):
     'firstname': 'Linus',
     'fruits': ['Apple', 'Banana', 'Cherry'], 
     'x': ['Apple', 'Banana', 'Cherry'], 
-    'y': ['Apple', 'Banana', 'Cherry']  
+    'y': ['Apple', 'Banana', 'Cherry'],
+    'greeting': 1,
+    'day':'Friday'
   }
   return HttpResponse(template.render(context, request))
