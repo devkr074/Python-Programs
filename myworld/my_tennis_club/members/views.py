@@ -28,6 +28,8 @@ def testing(request):
   context = {
     'mymembers': mymembers,
     'firstname': 'Linus',
-    'fruits': ['Apple', 'Banana', 'Cherry'],   
+    'fruits': ['Apple', 'Banana', 'Cherry'], 
+    'x': ['Apple', 'Banana', 'Cherry'], 
+    'y': ['Apple', 'Banana', 'Cherry']  
   }
   return HttpResponse(template.render(context, request))
