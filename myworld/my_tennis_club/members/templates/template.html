@@ -2,6 +2,8 @@
 <html>
 <body>
 
+{% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
+
 {% for x in fruits %}
   <h1>{{ x }}</h1>
 {% endfor %}
@@ -204,6 +206,8 @@
 <h1>Welcome{# Everyone#}</h1>
 
 <p>In views.py you can see what the fruits variable looks like.</p>
+
+{% include 'footer.html' %} 
 
 
 </body>
