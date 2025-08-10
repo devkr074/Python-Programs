@@ -36,6 +36,9 @@ def testing(request):
     mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
     mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
     mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname__startswith='L').value()
+    mydata = Member.objects.all().order_by('firstname').values()
+    mydata = Member.objects.all().order_by('-firstname').values()
+    mydata = Member.objects.all().order_by('lastname', '-id').values()
     template = loader.get_template("template.html")
     context = {
         "mymembers": mydata,
