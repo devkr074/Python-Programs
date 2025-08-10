@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
+from django.db.models import Q
 
 
 def members(request):
@@ -30,6 +31,11 @@ def testing(request):
     mydata = Member.objects.all().values()
     mydata = Member.objects.values_list('firstname')
     mydata = Member.objects.filter(firstname='Emil').values()
+    mydata = Member.objects.filter(firstname='Emil').values()
+    mydata = Member.objects.filter(firstname='Emil').values()
+    mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
+    mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
+    mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname__startswith='L').value()
     template = loader.get_template("template.html")
     context = {
         "mymembers": mydata,
